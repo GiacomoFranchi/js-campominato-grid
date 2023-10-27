@@ -13,3 +13,9 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 ## Svolgimento
 
 **Logica del programma**
+1. creare una funzione che prende come valori il numero minimo e massimo di caselle della nosra griglia
+    - per i = al numero minimo, finchè i <= numero massimo aggiungere alla variabile grigliaNum `<div class="box">${num}</div>` dove num è uguale a "i"
+    -far ritornare dalla funzione la variabile grigliaNum
+2. creare un eventListener che si attiva al click del bottone play
+3. associare alla classe .container la costante griglia
+4. dichiarare la funzione grigliaGioco e associare il risultato della funzione alla costante "griglia" cosi da creare la tabella in html
