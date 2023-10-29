@@ -1,28 +1,51 @@
-// EventListener click play
 document.getElementById("play").addEventListener("click", function(){
-    
-    let num = "";
-    const griglia = document.querySelector(".container");
-    
-    const grigliaFin = grigliaGioco(1, 100)
 
-    griglia.innerHTML = grigliaFin
+const container = document.querySelector(".container")
+const box = "";
+for(let i = 1; i <= 100; i++){
+    const box = document.createElement("div")
+    box.classList.add("box")
+    box.innerHTML = i
+
+    box.addEventListener("click", function(){
+        this.classList.add("blue")
+        console.log(this.textContent);
+    })
+    container.append(box)
+}
 })
 
+document.getElementById("play2").addEventListener("click", function(){
 
-
-
-
-
-
-
-// Funzioni
-
-function grigliaGioco(min,max) {
-    let grigliaNum = "";
-    for (let i = min; i <= max; i++) {
-        num = i;
-        grigliaNum += `<div class="box">${num}</div>`;
+    const container = document.querySelector(".container")
+    const box = "";
+    for(let i = 1; i <= 81; i++){
+        const box = document.createElement("div")
+        box.classList.add("box2")
+        box.innerHTML = i
+    
+        box.addEventListener("click", function(){
+            this.classList.add("blue")
+            console.log(this.textContent);
+        })
+        container.append(box)
     }
-    return grigliaNum;
-}
+    })
+
+
+document.getElementById("play3").addEventListener("click", function(){
+
+    const container = document.querySelector(".container")
+    const box = "";
+    for(let i = 1; i <= 49; i++){
+        const box = document.createElement("div")
+        box.classList.add("box3")
+        box.innerHTML = i
+        
+        box.addEventListener("click", function(){
+            this.classList.add("blue")
+            console.log(this.textContent);
+        })
+        container.append(box)
+    }       
+})
