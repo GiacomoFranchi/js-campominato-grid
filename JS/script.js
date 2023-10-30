@@ -1,51 +1,33 @@
 document.getElementById("play").addEventListener("click", function(){
-
-const container = document.querySelector(".container")
-const box = "";
-for(let i = 1; i <= 100; i++){
-    const box = document.createElement("div")
-    box.classList.add("box")
-    box.innerHTML = i
-
-    box.addEventListener("click", function(){
-        this.classList.add("blue")
-        console.log(this.textContent);
-    })
-    container.append(box)
-}
+    game(100, "box100")
 })
 
 document.getElementById("play2").addEventListener("click", function(){
+    game(81, "box81")
+    })
 
+
+document.getElementById("play3").addEventListener("click", function(){
+    game(49, "box49")
+   
+})
+
+
+//Funzioni 
+
+function game (max, classe){
     const container = document.querySelector(".container")
+    container.innerHTML = "";
     const box = "";
-    for(let i = 1; i <= 81; i++){
+    for(let i = 1; i <= max; i++){
         const box = document.createElement("div")
-        box.classList.add("box2")
+        box.classList.add(classe)
         box.innerHTML = i
     
         box.addEventListener("click", function(){
             this.classList.add("blue")
             console.log(this.textContent);
-        })
-        container.append(box)
-    }
-    })
-
-
-document.getElementById("play3").addEventListener("click", function(){
-
-    const container = document.querySelector(".container")
-    const box = "";
-    for(let i = 1; i <= 49; i++){
-        const box = document.createElement("div")
-        box.classList.add("box3")
-        box.innerHTML = i
-        
-        box.addEventListener("click", function(){
-            this.classList.add("blue")
-            console.log(this.textContent);
-        })
-        container.append(box)
-    }       
-})
+         })
+    container.append(box)
+}    
+}

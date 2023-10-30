@@ -23,9 +23,10 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    background-color: lightsalmon;
 }
 
-.box, .box2, .box3{
+.box100, .box81, .box49{
     text-align: center;
     border: 1px solid black;
     align-items: center;
@@ -33,19 +34,23 @@ header{
     justify-content: center;
 }
 
-.box{
+.box100{
     width: calc(100% / 10);
 }
 
-.box2{
+.box81{
     width: calc(100% / 9);
 }
 
-.box3{
+.box49{
     width: calc(100% / 7);
 }
 
 
 .blue{
     background-color: lightblue;
+}
+
+.hidden{
+    display: none;
 }
